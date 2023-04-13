@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "SampleGrpcServer";
+
+service SampleGrpc{
+	rpc SampleGrpcMethod(google.protobuf.Empty) returns(SampleGrpcResponseModel) { }
+}
+
+message SampleGrpcResponseModel{
+	string sample_string_property = 1;
+}
